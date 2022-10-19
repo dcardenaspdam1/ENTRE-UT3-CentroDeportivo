@@ -175,9 +175,9 @@ public class CentroDeportivo
         double precioDeClase = PRECIO_BASE + (duracionDeClase / 15) * PRECIO_QUINCE_MINUTOS;
         // la hora de finalización de la última clase (hora y minutos)
         int vecesOfertaClase = 600 / (duracionDeClase + DESCANSO);
-        int auxTotalMinutos = (vecesOfertaClase * (duracionDeClase + DESCANSO));
-        int horaUltimaClase = HORA_PRIMERA_CLASE + (auxTotalMinutos / 60);
-        int minutosUltimaClase = MINUTOS_PRIMERA_CLASE + (auxTotalMinutos % 60);
+        int totalMinutos = (vecesOfertaClase * (duracionDeClase + DESCANSO));
+        int horaUltimaClase = HORA_PRIMERA_CLASE + (totalMinutos / 60);
+        int minutosUltimaClase = MINUTOS_PRIMERA_CLASE + (totalMinutos % 60);
         
         if (minutosUltimaClase >= 60) {
             minutosUltimaClase -= 60;
